@@ -44,3 +44,4 @@ next-env.d.ts
 debug-email-output.json
 server_log.txt
 models.json
+.env*.local

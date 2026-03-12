@@ -13,12 +13,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/logo-sm.png" sizes="any" />
-      </head>
-      <body className={`${inter.className}`} suppressHydrationWarning>
-        <ClerkProvider>
+    <ClerkProvider>
+      <html lang="en">
+        <head>
+          <link rel="icon" href="/logo-sm.png" sizes="any" />
+        </head>
+        <body className={`${inter.className}`} suppressHydrationWarning>
           <Header />
           <main className="min-h-screen">{children}</main>
           <Toaster richColors />
@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
               <p>Developed by Parambir Singh</p>
             </div>
           </footer>
-        </ClerkProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

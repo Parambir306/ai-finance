@@ -13,8 +13,9 @@ export async function getCurrentBudget(accountId) {
       where: { clerkUserId: userId },
     });
 
+    // New users may not exist in DB yet
     if (!user) {
-      throw new Error("User not found");
+      return { budget: null, currentExpenses: 0 };
     }
 
     const budget = await db.budget.findFirst({

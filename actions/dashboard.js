@@ -25,8 +25,9 @@ export async function getUserAccounts() {
     where: { clerkUserId: userId },
   });
 
+  // New users may not exist in DB yet (checkUser creates them asynchronously)
   if (!user) {
-    throw new Error("User not found");
+    return [];
   }
 
   try {
@@ -48,6 +49,7 @@ export async function getUserAccounts() {
     return serializedAccounts;
   } catch (error) {
     console.error(error.message);
+    return [];
   }
 }
 
@@ -142,8 +144,9 @@ export async function getDashboardData() {
     where: { clerkUserId: userId },
   });
 
+  // New users may not exist in DB yet
   if (!user) {
-    throw new Error("User not found");
+    return [];
   }
 
   // Get all user transactions

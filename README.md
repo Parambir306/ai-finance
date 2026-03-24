@@ -11,6 +11,7 @@ The application simplifies personal finance management by automating expense tra
 It also includes a smart receipt scanner to extract data directly from images.
 
 🛠️ Built With
+
 React.js – Frontend UI
 
 Node.js – Backend runtime
@@ -29,6 +30,7 @@ OpenAI API – Generative AI
 
 
 ✨ Key Features
+
 📊 Real-time income & expense tracking
 
 🤖 AI-based transaction categorization
@@ -41,6 +43,7 @@ OpenAI API – Generative AI
 
 
 ⚙️ How It Works
+
 User inputs transaction or uploads a receipt
 
 Image is processed using OpenCV
@@ -53,6 +56,7 @@ Dashboard displays analytics and insights
 
 
 🎯 Outcome
+
 📉 Reduced manual effort in expense tracking
 
 📊 Improved financial visibility
@@ -71,6 +75,7 @@ Mobile application
 
 
 💡 Why This Project?
+
 Automates manual financial tracking
 
 Uses AI for smarter decision making
